@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: calc(1vw + 1em);
+}
+.bg {
+  background-image: url("../img/logo_react.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: -50% 150%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.title {
+  font-size: 3em;
+}
+.owl-carousel {
+  // background-image: radial-gradient(
+  //   circle,
+  //   rgba(#92f7f7, 0.4),
+  //   rgba(#92f7f7, 0.5),
+  //   rgba(#92f7f7, 0.7),
+  //   rgba(#92f7f7, 1)
+  // );
+
+  width: 100vw;
+  .owl-item {
+    height: 100vh;
+    .item {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img {
+        width: 40%;
+      }
+
+      h3 {
+        // color: white;
+      }
+
+      h1 {
+        border-bottom: 2px solid rgba(50, 24, 212, 0.4);
+        transform: skewX(20deg);
+        & > .label {
+          font-size: 1em;
+          background: linear-gradient(
+            90deg,
+            rgb(50, 24, 212) 0%,
+            rgb(50, 24, 212) 28%,
+            rgb(68, 40, 215) 28%,
+            rgb(68, 40, 215) 33%,
+            rgb(86, 57, 218) 33%,
+            rgb(86, 57, 218) 48%,
+            rgb(104, 73, 221) 48%,
+            rgb(104, 73, 221) 55%,
+            rgb(122, 90, 224) 55%,
+            rgb(122, 90, 224) 75%,
+            rgb(140, 106, 227) 75%,
+            rgb(140, 106, 227) 100%
+          );
+          display: inline-block;
+          padding: 10px 20px;
+
+          & > div {
+            transform: skewX(-20deg);
+            color: white;
+          }
+        }
+
+        .title {
+          font-size: 1.3em;
+          display: inline-block;
+          margin-left: 20px;
+          transform: skewX(-20deg);
+        }
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.myNav {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2em;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  .btn-prev,
+  .btn-next {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s, transform 0.3s;
+
+    &:hover {
+      opacity: 1;
+      // transform: rotateX(25deg);
+      transform: scaleY(0.9);
+    }
+
+    &.none {
+      transition: 0.1s;
+      opacity: 0.4;
+    }
+  }
+  .btn-prev {
+    margin-right: 20px;
+  }
+}
